@@ -1,4 +1,4 @@
-FROM gradle:8.7-jdk21 AS builder
+FROM gradle:8.7-jdk17 AS builder
 WORKDIR /app
 
 COPY --chown=gradle:gradle . .
