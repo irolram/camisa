@@ -1,4 +1,4 @@
-package com.example.camisa.Controller
+package com.example.camisa.controller
 
 import com.example.camisa.service.CamisaService
 import com.example.camisa.web.dto.CamisaRequest

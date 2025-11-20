@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${POSTGRES_URL}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://dpg-d4fkhtemcj7s73aq0le0-a.frankfurt-postgres.render.com:5432/bdcamisa_vodn
+    username: tienda_user
+    password: 51K6BX9Dhx7vj4xk0t7qodNPXPuhLsgz
   jpa:
     hibernate:
       ddl-auto: validate
