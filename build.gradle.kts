@@ -12,7 +12,7 @@ description = "Demo project for Spring Boot"
 
 java {
 	toolchain {
-		languageVersion.set(JavaLanguageVersion.of(21)) // Esto es opcional
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
