@@ -5,7 +5,7 @@ COPY --chown=gradle:gradle . .
 
 RUN gradle build -x test
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 COPY --from=builder /app/build/libs/*.jar app.jar
