@@ -14,6 +14,6 @@ spring:
     maximum-pool-size: 2  # Render free es muy limitado
 
   flyway:
-    enabled: true
+    enabled: false
     validate-on-migrate: false   # <-- evita validaciones que tardan 1-2 minutos
     baseline-on-migrate: true    # <-- arranque rápido
