@@ -1,5 +1,3 @@
-server:
-  port: ${PORT:8080}
 
 spring:
   datasource:
@@ -8,14 +6,7 @@ spring:
     password: 51K6BX9Dhx7vj4xk0t7qodNPXPuhLsgz
   jpa:
     hibernate:
-      ddl-auto: validate       # Solo valida que las tablas existan
+      ddl-auto: validate
     show-sql: true
   flyway:
     enabled: true
-    baseline-on-migrate: true  # Considera la BD existente como base
-    locations: classpath:db/migration  # Ruta de tus scripts SQL
-
-logging:
-  level:
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

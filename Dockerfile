@@ -13,4 +13,4 @@ COPY --from=builder /app/build/libs/*.jar app.jar
 EXPOSE 8080
 
 
-ENTRYPOINT ["sh", "-c", "java -Dserver.port=$PORT -jar /app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
