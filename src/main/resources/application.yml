@@ -1,4 +1,5 @@
-
+server:
+  port: ${PORT:8080}
 spring:
   datasource:
     url: jdbc:postgresql://dpg-d4fkhtemcj7s73aq0le0-a.frankfurt-postgres.render.com:5432/bdcamisa_vodn
