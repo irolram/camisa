@@ -8,12 +8,14 @@ spring:
     password: 51K6BX9Dhx7vj4xk0t7qodNPXPuhLsgz
   jpa:
     hibernate:
-      ddl-auto: validate
-    show-sql: false   # <-- MUY IMPORTANTE para acelerar el arranque
-  datasource.hikari:
-    maximum-pool-size: 2  # Render free es muy limitado
-
+      ddl-auto: validate       # Solo valida que las tablas existan
+    show-sql: true
   flyway:
-    enabled: false
-    validate-on-migrate: false   # <-- evita validaciones que tardan 1-2 minutos
-    baseline-on-migrate: true    # <-- arranque rápido
+    enabled: true
+    baseline-on-migrate: true  # Considera la BD existente como base
+    locations: classpath:db/migration  # Ruta de tus scripts SQL
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
