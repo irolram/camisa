@@ -1,5 +1,6 @@
 server:
   port: ${PORT:8080}
+
 spring:
   datasource:
     url: jdbc:postgresql://dpg-d4fkhtemcj7s73aq0le0-a.frankfurt-postgres.render.com:5432/bdcamisa_vodn
@@ -8,6 +9,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
-    show-sql: true
+    show-sql: false   # <-- MUY IMPORTANTE para acelerar el arranque
+  datasource.hikari:
+    maximum-pool-size: 2  # Render free es muy limitado
+
   flyway:
     enabled: true
+    validate-on-migrate: false   # <-- evita validaciones que tardan 1-2 minutos
+    baseline-on-migrate: true    # <-- arranque rápido
